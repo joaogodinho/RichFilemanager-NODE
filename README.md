@@ -16,7 +16,7 @@ const config = "/path/to/filemanager.config.json";	//Change this to the actual l
 var app = express();
 
 //Filemanager route
-app.use( '/filemanager', filemanager( "/path/to/dir", config ) );
+app.use( '/filemanager', filemanager( "/path/to/dir", config, '/temporary/upload/dir' ) );
 // '/filemanager' is the connector url. 
 // Don't forget to set it in the api.connectorUrl of `filemanager.config.json` for the frontend
 
