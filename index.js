@@ -16,10 +16,10 @@ const paths = require('path');
 const multer = require('multer');
 paths.posix = require('path-posix');
 
-const router = express.Router(); // eslint-disable-line
-const upload = multer({dest: 'public/'});
+const router = express.Router(); // eslint-disable-lin
 
-module.exports = (__appRoot, configPath) => { // eslint-disable-line max-statements
+module.exports = (__appRoot, configPath, dest='public/') => { // eslint-disable-line max-statements
+	const upload = multer({dest: dest});
 	//Init config
 	if ( typeof( configPath ) == "string" ) {
 		config = require(configPath);
